@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 *{
     margin: 0;
 
-    font-family: "Edu VIC WA NT Hand", cursive;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -28,19 +28,49 @@ ul{
     list-style: none;
 }
 
-a{
+.menu{
     display: inline-block;
     text-decoration: none;
     color: #FFF;
-    padding: 5px;
+    padding: 10px 15px;
     transition: 0.3s;
 }
 
-a:hover{
+.menu:hover{
     color: #167CBF;
-    background-color: rgba(255,255,255, 0.6);
+    background-color: rgba(255,255,255, 0.8);
     border-radius: 10px;
     border: #043e64;
     box-shadow: 3px 3px 3px #022a45;
     
+}
+
+
+.banner-principal{
+    text-align: center;
+    padding: 40px 200px; 
+    background-color:#043e64;;
+    color: #FFF;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 40px;
+}
+
+#btn-ver-livros{
+    background-color: #167CBF;
+    text-decoration: none;
+    color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#btn-ver-livros:hover{
+    background-color: #cf7c33;
+    border: none;
+
 }
