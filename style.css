@@ -11,6 +11,10 @@
     font-size: 22px;
     
 }
+body{
+    
+    background-color: #dfe0e0;
+}
 span{
     color: #F7941D;
 }
@@ -83,3 +87,109 @@ p{
     border: none;
 
 }
+
+.livros{
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.livros h2 {
+    color: #004C94;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.capa-livro{
+    max-width: 200px;
+    background: transparent;
+}
+
+
+.card-livro{
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #004C94; 
+    padding-top: 10px;
+    background-color: #FFF;
+}
+
+.info-livro{
+    padding: 10px;
+}
+
+.info-livro h3{
+    font-size: 20px;
+    color: #004C94;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.info-livro p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.tag-genero {
+  display: inline-block;
+  background-color: #F7941D;
+  color: var(--branco);
+  font-weight: 300;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.btn-trocar{
+    background-color: #004C94;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.modal{
+    max-width: 90vw;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 15px #004C94;
+    margin: 0 auto;
+}
+
+.modal img{
+    width: 500px;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(33, 37, 41, 0.85);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px; 
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    backdrop-filter: blur(4px); 
+    transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+background-color: rgba(220, 53, 69, 0.9); 
+}
+

@@ -26,6 +26,36 @@
         <a id="btn-ver-livros" href="#livros"> Ver livros disponíveis</a>       
     </section>
 
+    <section class="livros">
+        <h2>Livros disponíveis para troca</h2>
+        
+        <div class="grid-livros">
+            <div class="card-livro">
+                <img src="./img/java-como-programar.jpg" alt="Java Como Programar" class="capa-livro">
+                <div class="info-livro">
+                    <span class="tag-genero"> Tecnologia </span>
+                    <h3>Java Como Programar 10ª edição</h3>
+                    <p>Paul Deitel e Harvey Deitel</p>
+                    <button commandFor="modal" command="show-modal" class="btn-trocar">Quero Trocar</button>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <dialog id="modal" class="modal" role="dialog"> 
+        <button commandFor="modal" command="close" class="modal-close" aria-label="fechar">X Fechar</button> 
+        <img src="./img/java-como-programar.jpg" alt="Java Como Programar">
+        <div class="info-livro">
+            <span class="tag-genero"> Tecnologia </span>
+            <h3>Java Como Programar 10ª edição</h3>
+            <p>Paul Deitel e Harvey Deitel</p>
+            <button commandFor="modal" command="show-modal" class="btn-trocar">Quero Trocar</button>
+        </div>
+    </dialog>
+
+
+
 </body>
 
 </html>
