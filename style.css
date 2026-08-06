@@ -98,7 +98,7 @@ p{
 }
 
 .foto-livro{
-    max-width: 15vw;
+    max-width: 10vw;
 }
 
 .grade-livros{
@@ -118,7 +118,7 @@ p{
 }
 
 .card-livro{
-    width: 300px;
+    width: 200px;
     text-align: center;
     border-radius: 6px;
     padding: 30px;
@@ -132,11 +132,11 @@ p{
 
 .btn-livro{
     background-color: var(--laranja-principal);
-    padding: 15px 40px;
+    padding: 10px 25px;
     color: var(--branco-fonte);
     border: none;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
