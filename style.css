@@ -98,7 +98,8 @@ p{
 }
 
 .foto-livro{
-    max-width: 10vw;
+    width: 250px;
+    height: 280px;
 }
 
 .grade-livros{
@@ -118,16 +119,23 @@ p{
 }
 
 .card-livro{
-    width: 200px;
+    width: 10vw;
     text-align: center;
     border-radius: 6px;
-    padding: 30px;
     box-shadow: 0px 0px 10px #34a6f2;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .info-livro{
-    padding-top: 20px;
+    height: 250px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .btn-livro{
@@ -153,7 +161,7 @@ p{
     border-radius: 15px;
 }
 .titulo-livro{
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #004C94;
     padding: 15px 0;
 }
@@ -161,4 +169,48 @@ p{
 .autores-livro{
     font-size: 16px;
     margin-bottom: 15px;
+}
+
+/* Seção como funciona */
+
+.ajuda{
+    background-image: linear-gradient( #2286c9,#0e5b96);
+    padding: 60px 20px;
+}
+
+.ajuda h2 {
+    color: var(--branco-fonte);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.todos-passos{
+    display: flex;
+    justify-content: center;
+    max-width: 85vw;
+    margin: 0 auto;
+    text-align: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.passo{
+    width: 25vw;
+}
+
+.numero-passo{
+    font-size: 35px;
+    color: var(--laranja-principal);
+
+}
+
+.passo h3 {
+    font-size: 25px;
+    color: var(--branco-fonte);
+    font-weight: 600;
+}
+
+.passo p{
+    color: rgba(255, 255, 255, 0.7);
 }
