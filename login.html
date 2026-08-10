@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConnectBook - Login / Cadastro</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #f5ddc4 0%, #c9d4de 100%);
+    padding: 20px;
+  }
+
+  /* ---------- Container principal (a "janela" visível) ---------- */
+  .auth-container {
+    position: relative;
+    width: 720px;
+    max-width: 100%;
+    height: 460px;
+    background: #fff;
+    border: 1px solid #4a7ba6;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden; /* esconde o que sai da área durante o slide */
+  }
+
+  /* ---------- Trilho que desliza (contém as 2 telas lado a lado) ---------- */
+  .auth-track {
+    display: flex;
+    width: 200%; /* 2 telas = 200% do container */
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+
+  .auth-container.mostrar-cadastro .auth-track {
+    transform: translateX(-50%);
+  }
+
+  /* ---------- Cada tela (login / cadastro) ---------- */
+  .auth-screen {
+    width: 50%;
+    flex-shrink: 0;
+    height: 100%;
+    display: flex;
+  }
+
+  /* ---------- Painel da imagem ---------- */
+  .painel-imagem {
+    width: 45%;
+    height: 100%;
+    background-image: url("img/foto-login.png");
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* estrelinha decorativa no canto, como no mockup */
+  .painel-imagem::after {
+    content: "✦";
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.85;
+  }
+
+  /* ---------- Painel do formulário ---------- */
+  .painel-formulario {
+    width: 55%;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a4a7a;
+    margin-bottom: 4px;
+  }
+
+  .logo span {
+    color: #d98a3d;
+  }
+
+  .subtitulo {
+    text-align: center;
+    font-size: 12px;
+    color: #4a7ba6;
+    margin-bottom: 24px;
+  }
+
+  .campo {
+    margin-bottom: 14px;
+  }
+
+  .campo label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a4a7a;
+    margin-bottom: 4px;
+  }
+
+  .campo input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #4a7ba6;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .campo input:focus {
+    outline: none;
+    border-color: #1a4a7a;
+    box-shadow: 0 0 0 2px rgba(26, 74, 122, 0.15);
+  }
+
+  .linha-dupla {
+    display: flex;
+    gap: 12px;
+  }
+
+  .linha-dupla .campo {
+    flex: 1;
+  }
+
+  .opcoes-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .opcoes-login label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #444;
+  }
+
+  .opcoes-login a {
+    color: #4a7ba6;
+    text-decoration: none;
+  }
+
+  .opcoes-login a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Botão principal (gradiente azul -> laranja) ---------- */
+  .btn-principal {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    background: linear-gradient(90deg, #1a4a7a, #d98a3d);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-principal:hover {
+    opacity: 0.9;
+  }
+
+  .btn-principal:focus-visible {
+    outline: 3px solid #1565c0;
+    outline-offset: 2px;
+  }
+
+  .troca-tela {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .troca-tela button {
+    background: none;
+    border: none;
+    color: #1a4a7a;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .troca-tela button:focus-visible {
+    outline: 3px solid #1565c0;
+    outline-offset: 2px;
+  }
+
+  /* ---------- Responsivo: empilha em telas pequenas ---------- */
+  @media (max-width: 640px) {
+    .auth-container {
+      height: 620px;
+    }
+    .auth-screen {
+      flex-direction: column;
+    }
+    .painel-imagem {
+      width: 100%;
+      height: 35%;
+    }
+    .painel-formulario {
+      width: 100%;
+      height: 65%;
+      padding: 20px 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="auth-container" id="auth-container">
+  <div class="auth-track">
+
+    <!-- ---------- FRAME 1: LOGIN (imagem à esquerda, form à direita) ---------- -->
+    <div class="auth-screen">
+      <div class="painel-imagem"></div>
+
+      <div class="painel-formulario">
+        <div class="logo">Connect<span>Book</span></div>
+        <div class="subtitulo">Troque livros, multiplique histórias</div>
+
+        <form id="form-login">
+          <div class="campo">
+            <label for="login-usuario">Usuário ou Email</label>
+            <input type="text" id="login-usuario" required>
+          </div>
+          <div class="campo">
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" required>
+          </div>
+
+          <div class="opcoes-login">
+            <label><input type="checkbox" id="lembrar-senha"> Lembrar senha</label>
+            <a href="#">Esqueci a senha?</a>
+          </div>
+
+          <button type="submit" class="btn-principal">Acessar</button>
+        </form>
+
+        <div class="troca-tela">
+          <button type="button" id="btn-ir-cadastro">Ainda não possuo uma conta.</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- FRAME 2: CADASTRO (form à esquerda, imagem à direita) ---------- -->
+    <div class="auth-screen">
+      <div class="painel-formulario">
+        <div class="logo">Connect<span>Book</span></div>
+        <div class="subtitulo">Troque livros, multiplique histórias</div>
+
+        <form id="form-cadastro">
+          <div class="campo">
+            <label for="cad-nome">Nome</label>
+            <input type="text" id="cad-nome" required>
+          </div>
+          <div class="campo">
+            <label for="cad-email">Email</label>
+            <input type="email" id="cad-email" required>
+          </div>
+          <div class="campo">
+            <label for="cad-usuario">Usuário</label>
+            <input type="text" id="cad-usuario" required>
+          </div>
+
+          <div class="linha-dupla">
+            <div class="campo">
+              <label for="cad-senha">Senha</label>
+              <input type="password" id="cad-senha" required>
+            </div>
+            <div class="campo">
+              <label for="cad-confirma">Confirma senha</label>
+              <input type="password" id="cad-confirma" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-principal">Cadastrar-se</button>
+        </form>
+
+        <div class="troca-tela">
+          <button type="button" id="btn-ir-login">Já possuo uma conta. Acessar agora!</button>
+        </div>
+      </div>
+
+      <div class="painel-imagem"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const container = document.getElementById('auth-container');
+  const btnIrCadastro = document.getElementById('btn-ir-cadastro');
+  const btnIrLogin = document.getElementById('btn-ir-login');
+
+  btnIrCadastro.addEventListener('click', () => {
+    container.classList.add('mostrar-cadastro');
+  });
+
+  btnIrLogin.addEventListener('click', () => {
+    container.classList.remove('mostrar-cadastro');
+  });
+
+  document.getElementById('form-login').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Login enviado (exemplo).');
+  });
+
+  document.getElementById('form-cadastro').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Cadastro enviado (exemplo).');
+  });
+</script>
+
+</body>
+</html>

@@ -109,8 +109,15 @@ p{
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: hidden;
+    max-height: 60vh;
 }
 
+
+.grade-livros.expandido{
+    max-height: 200vh;
+}
+                                                                                   
 .area-titulo{
     text-align: center;  
     font-size: 35px;
@@ -173,6 +180,21 @@ p{
     margin-bottom: 15px;
 }
 
+.ver-mais-tootle{
+    display: none;
+}
+
+
+.btn-ver-mais{
+    display: inline-block;
+    margin-top: 12px;
+    cursor: pointer;
+    color: #003A66;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
 /* Seção como funciona */
 
 .ajuda{
@@ -204,32 +226,110 @@ p{
 .numero-passo{
     font-size: 35px;
     color: var(--laranja-principal);
-
 }
 
 .passo h3 {
-    font-size: 25px;
+    padding: 10px;
+    font-size: 22px;
     color: var(--branco-fonte);
     font-weight: 600;
 }
 
 .passo p{
     color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
 }
 
 footer{    
     background-image: linear-gradient(#0e5b96);
+    padding: 10px;
+    color: #FFF;
 }
 
 .footer-container{
     margin: 0 auto;
-    width: 90vw;
-    color: #FFF;
-    display: flex;
+    max-width: 85vw;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+
 }
 
 .footer-coluna{
+    max-width:30vw;
+    min-width: 15vw;
+}
+.footer-coluna ul{
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
 }
 
+.footer-coluna ul{
+    margin-top: 25px;
+}
+
+.footer-coluna ul li a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.footer-coluna ul li a:hover{
+    color: var(--laranja-principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-coluna p {
+     font-size: 18px;
+     margin-bottom: 20px;
+}
+.footer-coluna h4{
+    font-size: 20px;
+    color: var(--laranja-principal);
+}
+
+
+
+.footer-social{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a{
+    padding: 0;
+    text-decoration: none;
+    color: var(--branco-fonte);
+    font-size: 25px;
+}
+
+ .footer-social a:hover{
+    color: var(--laranja-principal);
+    text-decoration: none;
+    transform: scale(1.3);
+ }
+
+
+.footer-linha{
+    background-color: #FFF;
+    opacity: 50% ;
+    width: 85vw;
+    height: 1px;
+    margin: 20px auto;
+}
+.footer-copy{
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-copy span {
+    font-size: 20px;
+}
