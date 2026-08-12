@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
     <link rel="stylesheet" href="style.css">
     <title>Troca Livros</title>
 </head>
@@ -15,21 +17,22 @@
         <div id="nome-logo">Connect<span>Book</span></div>
         <nav>
             <ul>
-                <li> <a class="menu" href="#"> Início </a> </li>
-                <li> <a class="menu" href="#"> Livros </a> </li>
-                <li> <a class="menu" href="#"> Ajuda </a> </li>
-                <li> <a class="menu" href="#"> Conta </a></li>
+                <li> <a class="menu" href="#inicio"> Início </a> </li>
+                <li> <a class="menu" href="#livros"> Livros </a> </li>
+                <li> <a class="menu" href="#ajuda"> Ajuda </a> </li>
+                <li> <a class="menu" href="#conta"> Conta </a></li>
             </ul>
         </nav>
     </header>
-    <section class="banner-principal">
+    <section class="banner-principal" id="inicio">
         <h1 >Troque livros, multiplique histórias</h1>
-        <p>A ConnectBook conecta leitores para trocar livros de forma simples, gratuita e sustentável. <br> Dê um novo destino aos livros que você já leu.</p>
-        <a id="btn-ver-livros" href="#livros"> Ver livros disponíveis</a>       
+        <p>A ConnectBook conecta leitores para trocar livros de forma simples, gratuita e sustentável. <br> Dê um novo
+            destino aos livros que você já leu.</p>
+        <a id="btn-ver-livros" href="#livros"> Ver livros disponíveis</a>
     </section>
 
-     <h2 class="area-titulo"> Livros Disponíveis </h2>
-    <section class="grade-livros">
+    <h2 class="area-titulo"> Livros Disponíveis  </h2>
+    <section class="grade-livros" id="livros" >
 
         <div class="card-livro">
             <img src="img/use-a-cabeça-java.jpg" alt="" class="foto-livro">
@@ -51,7 +54,7 @@
             </div>
         </div>
 
-         <div class="card-livro">
+        <div class="card-livro">
             <img src="img/harry-potter.jpg" alt="" class="foto-livro">
             <div class="info-livro">
                 <span class="categoria-livro"> Ficção </span>
@@ -61,7 +64,7 @@
             </div>
         </div>
 
-         <div class="card-livro">
+        <div class="card-livro">
             <img src="img/a-republica.jpg" alt="" class="foto-livro">
             <div class="info-livro">
                 <span class="categoria-livro"> Tecnologia </span>
@@ -81,7 +84,7 @@
             </div>
         </div>
 
-         <div class="card-livro">
+        <div class="card-livro">
             <img src="img/python-para-leigos.jpg" alt="" class="foto-livro">
             <div class="info-livro">
                 <span class="categoria-livro"> Ficção </span>
@@ -112,8 +115,8 @@
     </section>
 
     <!-------- Seçao Como Funciona --------->
-    
-    <section class="ajuda">
+
+    <section class="ajuda" id="ajuda">
         <h2> Como Funciona </h2>
         <div class="todos-passos">
             <div class="passo">
@@ -136,42 +139,43 @@
 
     <footer>
         <div class="footer-container">
-                <div class="footer-coluna">
-                        <div class="logo">Connect<span>Book</span></div>
-                        <p>Uma plataforma criada para conectar leitores e incentivar a troca de livros de forma gratuita, simples e sustentável</p>
+            <div class="footer-coluna">
+                <div class="logo">Connect<span>Book</span></div>
+                <p>Uma plataforma criada para conectar leitores e incentivar a troca de livros de forma gratuita, 
+                    simples e sustentável</p>
 
-                        <div class="footer-social">
-                            <a href="#"> <i class="fa-brands fa-instagram"> </i> </a>
-                            <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
-                            <a href="#"> <i class="fa-brands fa-square-linkedin"></i> </a>
-                        </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/"> <i class="fa-brands fa-instagram"> </i> </a>
+                    <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
+                    <a href="#"> <i class="fa-brands fa-square-linkedin"></i> </a>
                 </div>
-                <div class="footer-coluna">
-                    <h4>Navegaçao</h4>
-                    <ul>
-                        <li> <a href="#">Inicio</a></li>
-                        <li> <a href="#">Livros</a></li>
-                        <li> <a href="#">Ajuda</a></li>
-                    </ul>
-                </div>
-                <div class="footer-coluna">
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li> <a href="#">Termos de uso</a></li>
-                        <li> <a href="#">Política de privacidade</a></li>
-                        <li> <a href="#">Fale conosco</a></li>
-                    </ul>
-                </div>
-                   <div class="footer-coluna">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li> contato@conectbook.com.br</li>
-                        <li> (61) 3434-0052</li>
-                        <li> Brasília, DF - Brasil</li>
-                    </ul>
-                </div>
+            </div>
+            <div class="footer-coluna">
+                <h4>Navegaçao</h4>
+                <ul>
+                    <li> <a href="#">Inicio</a></li>
+                    <li> <a href="#">Livros</a></li>
+                    <li> <a href="#">Ajuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-coluna">
+                <h4>Suporte</h4>
+                <ul>
+                    <li> <a href="#">Termos de uso</a></li>
+                    <li> <a href="#">Política de privacidade</a></li>
+                    <li> <a href="#">Fale conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-coluna">
+                <h4>Contato</h4>
+                <ul>
+                    <li> contato@conectbook.com.br</li>
+                    <li> (61) 3434-0052</li>
+                    <li> Brasília, DF - Brasil</li>
+                </ul>
+            </div>
         </div>
-        <hr class="footer-linha">  
+        <hr class="footer-linha">
         <p class="footer-copy"> &copy; 2026 - Todos os direitos Reservados.</p>
     </footer>
 
