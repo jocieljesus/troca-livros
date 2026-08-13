@@ -1,0 +1,38 @@
+@import url(style.css);
+
+
+main{
+    width: 1142px;
+    height: 673px;
+    border: 2px solid var(--azul-principal);
+    margin: 10vh auto;
+    background-image: linear-gradient(rgba(255, 141, 40, 35%), rgb(0, 75, 141, 35%));
+    display: flex;
+}
+
+.sessao-imagem{
+    width: 522px;
+    height: 673px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-login{
+    height: 673px;
+    width: 620px ;
+}
+
+.area-titulo{
+    text-align: center;
+}
+
+.area-titulo h1, span{
+    font-size: 36px;
+    padding-bottom: 5px;
+}
+
+
+.area-titulo h2{
+    font-size: 24px;
+}
