@@ -14,14 +14,8 @@ main{
     width: 1142px;
     height: 661px;
     display: flex;
-    box-shadow: 0px 0px 20px #013456;
+    box-shadow: 0 0 25px #023e65;
     border-radius: 10px;
-    
-    
-}
-img{
-    
-    border-radius: 10px 0 0  10px;
 }
 
 .sessao-imagem{
@@ -30,6 +24,10 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.sessao-imagem img{
+    border-radius: 10px 0 0 10px;
 }
 
 .sessao-login{
@@ -106,4 +104,15 @@ form label{
 
 .links-senha label, input, a{
     color: #2376ad;
+    font-weight: 400;
+}
+
+section a:hover{
+    color: #2376ad;
+    font-weight: 600;
+}
+
+
+#link-nao-conta{
+    text-align: center;
 }
