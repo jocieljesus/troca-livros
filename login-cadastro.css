@@ -1,6 +1,9 @@
 @import url(style.css);
 
 
+ *{
+    box-sizing: border-box;
+ }
 body{
     background-image: linear-gradient(rgba(255, 141, 40, 20%), rgb(0, 75, 141, 20%) );
     width:100vw;
@@ -31,8 +34,8 @@ main{
 }
 
 .sessao-login{
-    height: 673px;
-    width: 620px ;
+    height: 661px;
+    width: 632px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,7 +101,7 @@ form label{
 }
 
 .links-senha label {
-    position: relative;
+    position: relative; 
     right: 75px;
 }
 
@@ -115,4 +118,56 @@ section a:hover{
 
 #link-nao-conta{
     text-align: center;
+}
+
+
+/* Personalizando a area Cadastro*/
+
+
+.img-cadastro img{
+    border-radius: 0 10px 10px 0;
+}
+
+
+.area-senha {
+    display: flex;
+    gap: 20px;
+        width: 434px;
+}
+
+.campo-senha{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo-senha input{
+    width: 100%;
+}
+
+#email{
+    margin-bottom: 0px;
+}
+
+#link-ja-conta{
+    text-align: center;
+}
+
+
+.msg{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sucesso{
+    color: green;
+}
+
+.erro{
+    color:red
+}
+
+.escondido{
+    display: none;
 }
