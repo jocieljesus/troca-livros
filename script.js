@@ -1,10 +1,10 @@
-const telaCadastro = document.getElementById("form-cadastro");
-const telaLogin = document.getElementById("form-login");
+const telaCadastro = document.getElementById("tela-cadastro");
+const telaLogin = document.getElementById("tela-login");
 const btnCadastrar = document.getElementById("btn-cadastrar");
 const msgCadastro = document.getElementById("msg-cadastro");
 const btnLogar = document.getElementById("btn-acessar");
 const msgLogin = document.getElementById("msg-login");
-const BANCO_USUARIO = "usuariosCadastrados"
+const BANCO_USUARIO = "usuariosCadastrados";
 
 
  if(btnCadastrar){
@@ -121,8 +121,7 @@ function trocarTela(telaEsconder, telaMostrar){
    telaEsconder.classList.add("escondido");
    telaMostrar.classList.remove("escondido");
    
-   telaEsconder.reset();
-   
+   telaEsconder.querySelector("form").reset();
 
    msgCadastro.textContent = "";
    msgLogin.textContent = "";

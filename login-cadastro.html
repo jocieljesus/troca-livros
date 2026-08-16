@@ -8,9 +8,43 @@
 </head>
 <body>
 
-    <main>
+    <main id="tela-login">
+        <section class="sessao-imagem img-cadastro">
+            <img src="img/tela-login.png" alt="Casal numa livraria">
+        </section>
+
         <section class="sessao-login">
             <div class="area-titulo">
+                <h1>Connect<span>Book</span></h1>
+                <h2>Troque livros, multiplique histórias</h2>
+            </div>
+            <form action="#" id="form-login">
+
+                <label for="email-login"> Usuário ou Email</label>
+                <input type="text" id="email-login" placeholder="Informe seu email">
+                
+                <label for="senha-login"> Senha </label>
+                <input type="password" id="senha-login" placeholder="Informe sua senha">
+
+                <div class="links-senha"> 
+                    <input type="checkbox" id="lembrar-senha">
+                    <label for="lembrar-senha"> Lembrar senha </label>
+                    
+                    <a href="index.html" id="link-esqueceu-senha"> Esqueceu a senha? </a>
+                </div>
+
+                <button id="btn-acessar"> Acessar </button>
+                <p id="msg-login" class="msg"></p>
+                <a  href=""  id="link-nao-conta" class="link"> Ainda não possuo uma conta </a>
+
+            </form>
+
+        </section>
+    </main>
+
+    <main id="tela-cadastro" class="escondido">
+        <section class="sessao-login">
+            <div class="area-titulo titulo-cadastro">
                 <h1>Connect<span>Book</span></h1>
                 <h2>Troque livros, multiplique histórias</h2>
             </div>
@@ -39,32 +73,8 @@
 
 
                 <button id="btn-cadastrar"> Cadastrar-se </button>
-                <p id="msg-cadastro"   class="msg"></p>
+                <p id="msg-cadastro" class="msg"></p>
                 <a href="" id="link-ja-conta">  Já possuo uma conta. Acessar agora! </a>
-
-            </form>
-
-                <form action="#" id="form-login" class="escondido">
-
-                <label for="email-login"> Usuário ou Email</label>
-                <input type="text" id="email-login" placeholder="Informe seu email">
-                
-                <label for="senha-login"> Senha </label>
-                <input type="password" id="senha-login" placeholder="Informe sua senha">
-
-                <div class="links-senha"> 
-                    <input type="checkbox" id="lembrar-senha">
-                    <label for="lembrar-senha"> Lembrar senha </label>
-                    
-                    <a href="index.html" id="link-esqueceu-senha"> Esqueceu a senha? </a>
-                </div>
-
-                <button id="btn-acessar"> Acessar </button>
-                <p id="msg-login" class="msg"></p>
-                <a  href=""  id="link-nao-conta" class="link"> Ainda não possuo uma conta <a/>
-
-            </form>
-
         </section>
         <section class="sessao-imagem img-cadastro">
             <img src="img/tela-login.png" alt="Casal numa livraria">

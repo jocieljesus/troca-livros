@@ -132,7 +132,7 @@ section a:hover{
 .area-senha {
     display: flex;
     gap: 20px;
-        width: 434px;
+    width: 434px;
 }
 
 .campo-senha{
@@ -170,4 +170,9 @@ section a:hover{
 
 .escondido{
     display: none;
+}
+
+
+.titulo-cadastro{
+    margin-bottom: 40px;
 }
