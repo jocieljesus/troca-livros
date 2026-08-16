@@ -74,6 +74,39 @@ ul{
     
 }
 
+
+.busca{
+    display: flex;
+    width: 20vw;
+    height: 3vh;
+    border: 3px solid #FFF;
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.campo-busca{
+    flex: 1;
+    border: none;
+    background:none;
+    outline: none;
+    font-size: 25px;
+    padding-left: 10px;
+    color: #FFF;
+}
+
+.btn-busca{
+    font-size: 25px;
+    border: none;
+    color: #FFF;
+    background: none;
+}
+
+.btn-busca:hover{
+    color: #F7941D;
+    transform: scale(1.1);
+}
+
 .banner-principal{
     margin-top: 10vh;
     text-align: center;
@@ -139,6 +172,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .info-livro{
