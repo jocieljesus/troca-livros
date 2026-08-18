@@ -29,7 +29,7 @@ main{
     align-items: center;
 }
 
-.sessao-imagem img{
+#img-login{
     border-radius: 10px 0 0 10px;
 }
 
@@ -123,56 +123,3 @@ section a:hover{
 
 /* Personalizando a area Cadastro*/
 
-
-.img-cadastro img{
-    border-radius: 0 10px 10px 0;
-}
-
-
-.area-senha {
-    display: flex;
-    gap: 20px;
-    width: 434px;
-}
-
-.campo-senha{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.campo-senha input{
-    width: 100%;
-}
-
-#email{
-    margin-bottom: 0px;
-}
-
-#link-ja-conta{
-    text-align: center;
-}
-
-
-.msg{
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 18px;
-}
-
-.sucesso{
-    color: green;
-}
-
-.erro{
-    color:red
-}
-
-.escondido{
-    display: none;
-}
-
-
-.titulo-cadastro{
-    margin-bottom: 40px;
-}
