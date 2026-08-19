@@ -1,0 +1,23 @@
+@import url(login.css);
+
+h1{
+    padding-top: 20px;
+}
+
+.area-titulo{
+    margin-bottom: 40px;
+}
+
+
+.area-senha{
+    display: flex;
+    gap: 10px;
+}
+
+.area-senha input{
+    width: 100%;
+}
+
+.sessao-imagem img{
+    border-radius: 0 10px 10px 0;
+}

@@ -1,5 +1,9 @@
 @import url(style.css);
 
+*{
+    box-sizing: border-box;
+}
+
 
 body{
     background-image: linear-gradient(rgba(255, 141, 40, 20%), rgb(0, 75, 141, 20%) );
@@ -31,8 +35,8 @@ main{
 }
 
 .sessao-login{
-    height: 673px;
-    width: 620px ;
+    height: 661px;
+    width: 632px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +69,7 @@ form{
 }
 
 form input{
-    height: 35px;
+    height: 50px;
     padding: 5px 10px;
     font-size: 18px;
 }
