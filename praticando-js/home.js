@@ -33,4 +33,39 @@ btnAzul.addEventListener('click', () => {
     caixa.style.backgroundColor = "blue";
 });
  
+// Simulando adição e subtraçao de valor
+const valorReal = document.getElementById("valor_real");
+let contador = 0;
+
+document.getElementById("btn_menos").addEventListener( 'click', () => {
+    if( contador > 0){
+        contador--;
+        valorReal.textContent = contador;
+    }
+});
+
+document.getElementById("btn_mais").addEventListener( 'click', () => {
+    contador++;
+    valorReal.textContent = contador;
+});
+
+// Adicionando Livros
+
+const nomeLivro = document.getElementById("nome_livro");
+const listaLivros = document.getElementById("lista_livros")
+
+document.getElementById("adiciona_livro").addEventListener('click', ()=>{
+    
+    const novoLivro = document.createElement("li");
+    novoLivro.textContent = nomeLivro.value;
+    listaLivros.appendChild(novoLivro);
+
+    nomeLivro.value = "";
+
+});
+
+
+
+
+
 
