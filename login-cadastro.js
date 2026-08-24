@@ -138,3 +138,25 @@ document.getElementById("link-ja-conta").addEventListener('click', function(e){
    e.preventDefault();
    trocarTela(telaCadastro, telaLogin);
 })
+
+
+// Seleciona os elementos do HTML
+const inputSenha = document.getElementById('senha-login');
+const btnOlhinho = document.getElementById('btn-olhinho');
+
+btnOlhinho.addEventListener('click', function () {
+  // Verifica se o input está como 'password'
+  const tipoAtual = inputSenha.getAttribute('type');
+  
+  if (tipoAtual === 'password') {
+    // Transforma em texto para mostrar a senha
+    inputSenha.setAttribute('type', 'text');
+    // Troca o ícone para o "olho fechado"
+    btnOlhinho.textContent = '🙉'; 
+  } else {
+    // Volta a ser senha oculta
+    inputSenha.setAttribute('type', 'password');
+    // Volta o ícone normal
+    btnOlhinho.textContent = '🙈'; 
+  }
+});

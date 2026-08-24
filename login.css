@@ -71,6 +71,8 @@ form input{
     height: 35px;
     padding: 5px 10px;
     font-size: 18px;
+    border: none;
+    border-radius: 5px;
 }
 
 #email{
@@ -118,6 +120,29 @@ section a:hover{
 
 #link-nao-conta{
     text-align: center;
+}
+
+
+.senha-container {
+  position: relative;
+}
+
+.senha-container input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 45px; /* Deixa um espaço em branco para o texto não ficar embaixo do ícone */
+  border:none;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura */
+}
+
+.senha-container button {
+  position: absolute;
+  right: 0px; /* Posiciona no canto direito */
+  transform: translateY(-50%); /* Centraliza perfeitamente no eixo Y */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
 
