@@ -38,6 +38,7 @@ header{
     box-sizing: border-box;
     padding: 0 10vw;
     top: 0;
+
 }
 
 
@@ -348,3 +349,169 @@ footer{
     box-sizing: border-box;
   
 }
+
+/* Estilizando Carrossel */
+
+.titulo-carrossel{
+    text-align: center;
+    margin: 50px;
+    font-size: 2rem;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.container-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 50%;
+    display: none;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 5em;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.seta:hover{
+    color: #167CBF;
+ }
+
+.seta-esquerda { left: 10px; }
+.seta-direita { right: 10px; }
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ponto {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.ponto.ativo {
+    background: #333;
+}
+
+
+
+/*  MODAL DE DETALHES DO LIVRO   */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* Classe adicionada via JavaScript para exibir o modal */
+.modal-overlay.modal-ativo {
+  display: flex;
+}
+
+.modal-caixa {
+  background-color: var(--branco);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--branco);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal-capa {
+  background-color: var(--azul-senac);
+  color: var(--branco);
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.modal-conteudo {
+  padding: 25px 25px 30px 25px;
+}
+
+.modal-conteudo h3 {
+  color: var(--azul-escuro);
+  font-size: 1.4rem;
+  margin: 10px 0 5px 0;
+}
+
+.modal-autor {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.modal-estado {
+  font-size: 0.85rem;
+  color: var(--azul-senac);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.modal-sinopse {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.modal-acoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-cancelar {
+  background-color: transparent;
+  color: var(--cinza-texto);
+  border: 1px solid #ccc;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background-color: var(--cinza-claro);
+}
+

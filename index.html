@@ -34,12 +34,50 @@
             destino aos livros que você já leu.</p>
         <a id="btn-ver-livros" href="#livros"> Ver livros disponíveis</a>
     </section>
-
+    
+    <!-------- Seçâo Livros ------->
     <h2 class="area-titulo"> Livros Disponíveis  </h2>
     <section class="grade-livros" id="livros" >
     
     </section>
 
+    <!------   MODAL ----->
+    <div class="modal-overlay" id="modalLivro">
+        <div class="modal-caixa">
+        <button class="modal-fechar" id="modalFechar" aria-label="Fechar">&times;</button>
+
+        <div class="modal-capa" id="modalCapa">📖</div>
+
+        <div class="modal-conteudo">
+            <span class="tag-genero" id="modalGenero">Ficção</span>
+            <h3 id="modalTitulo">Título do livro</h3>
+            <p class="modal-autor" id="modalAutor">Autor</p>
+            <p class="modal-estado" id="modalEstado">Estado de conservação</p>
+            <p class="modal-sinopse" id="modalSinopse">Sinopse do livro...</p>
+
+            <div class="modal-acoes">
+            <button class="btn-laranja" id="modalConfirmar">Confirmar interesse</button>
+            <button class="btn-cancelar" id="modalCancelar">Cancelar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!----- Seção carrossel ------>
+
+    <section class="carrossel">
+        <h2 class="titulo-carrossel"> Um pouco antes do ConnectBook </h2>
+        <button class="seta seta-esquerda" onclick="mudarSlide(-1)"> &#10094; </button>
+            <div class="container-slides">
+                <img src="img/banner1.jpg" class="slide ativo">
+                <img src="img/banner2.jpg" class="slide">
+                <img src="img/banner3.jpg" class="slide">
+            </div>
+        <button class="seta seta-direita" onclick="mudarSlide(1)"> &#10095; </button>
+
+        <div class="indicadores"></div>
+
+    </section>
     <!-------- Seçao Como Funciona --------->
 
     <section class="ajuda" id="ajuda">
