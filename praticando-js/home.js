@@ -58,14 +58,25 @@ document.getElementById("adiciona_livro").addEventListener('click', ()=>{
     
     const novoLivro = document.createElement("li");
     novoLivro.textContent = nomeLivro.value;
+   
+    const novoButtton = document.createElement("button");
+    novoButtton.textContent = "X"; 
+    novoButtton.style.marginLeft = "20px";
+    novoLivro.appendChild(novoButtton);
+
     listaLivros.appendChild(novoLivro);
+
+    novoButtton.addEventListener( 'click', () => {
+        novoLivro.remove();
+    })
 
     nomeLivro.value = "";
 
 });
 
 
-
-
+document.getElementById("remover_livro").addEventListener('click', ()=>{
+    listaLivros.innerHTML = "";
+});
 
 
