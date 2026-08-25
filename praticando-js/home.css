@@ -69,9 +69,19 @@ ul{
 }
 
 li{
+    width: 20vw;
     list-style: none;
     background-color: #d1d68b;
     padding: 0 100px;
     border-radius: 5px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn_x{
+    color: red;
+    border: none;
+    background-color: transparent;
 }
