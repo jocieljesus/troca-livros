@@ -120,3 +120,7 @@ section a:hover{
 #link-nao-conta{
     text-align: center;
 }
+
+#block-scroll{
+    overflow: hidden;
+}

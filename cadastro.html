@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro.css">
+    <script defer src="cadastro.js"></script>
     <title>Área de Cadastro</title>
 </head>
 <body>
 
     <main>
-        
         <section class="sessao-login">
             <div class="area-titulo">
                 <h1>Connect<span>Book</span></h1>
@@ -19,31 +19,31 @@
             <form action="#" id="form-cadastro">
                
                 <label for="nome"> Nome </label>
-                <input type="text" id="nome" placeholder="Informe seu nome">
+                <input type="text" id="nome" placeholder="Informe seu nome" required>
 
                 <label for="email"> Email</label>
-                <input type="text" id="email" placeholder="Informe seu email">
+                <input type="email" id="email" placeholder="Informe seu email" required>
 
                  <label for="usuario"> Usuário</label>
-                <input type="text" id="usuario" placeholder="Informe seu usuario">
+                <input type="text" id="usuario" placeholder="Informe seu usuario" required>
                 
                 
                 <div class="area-senha">
 
                     <div>
                         <label for="senha"> Senha </label>
-                        <input type="password" id="senha" placeholder="Informe sua senha">
+                        <input type="password" id="senha" placeholder="Informe sua senha" required>
                     </div>
 
                     <div>
                         <label for="confirma-senha"> Confirma Senha </label>
-                        <input type="password" id="confirma-senha" placeholder="Confirme sua senha">
+                        <input type="password" id="confirma-senha" placeholder="Confirme sua senha" required>
                     </div>
-
                 </div>
+                
+                <label id="msg-erro"></label>
 
-
-                <button id="btn-acessar"> Cadastrar-se </button>
+                <button  id="btn-cadastrar" type="button"> Cadastrar-se </button>
                 <a href="login.html" id="link-nao-conta"> Já possuo uma conta. Acessar agora!</a>
 
             </form>
@@ -57,6 +57,5 @@
 
     </main>
 
-    
 </body>
 </html>
