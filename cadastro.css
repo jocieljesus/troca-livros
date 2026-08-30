@@ -1,23 +1,55 @@
 @import url(login.css);
 
-h1{
-    padding-top: 20px;
-}
 
-.area-titulo{
-    margin-bottom: 40px;
+#img-cadastro{
+    border-radius: 0 10px 10px 0;
 }
 
 
-.area-senha{
+.area-senha {
     display: flex;
     gap: 10px;
+    width: 434px;
 }
 
-.area-senha input{
+.campo-senha{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo-senha input{
     width: 100%;
 }
 
-.sessao-imagem img{
-    border-radius: 0 10px 10px 0;
+#email{
+    margin-bottom: 0px;
+}
+
+#link-ja-conta{
+    text-align: center;
+}
+
+
+.msg{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sucesso{
+    color: green;
+}
+
+.erro{
+    color:red
+}
+
+.escondido{
+    display: none;
+}
+
+
+.titulo-cadastro{
+    margin-bottom: 40px;
 }

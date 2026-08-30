@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <script defer src="login.js"> </script>
+    <script src="login.js" defer></script>
     <title>Área de Login</title>
 </head>
 <body>
-    <main>
-        <section class="sessao-imagem">
-            <img src="img/tela-login.png" alt="Casal numa livraria">
+    
+        <main id="tela-login">
+        <section class="sessao-imagem img-cadastro">
+            <img src="img/tela-login.png" alt="Casal numa livraria" id="img-login">
         </section>
-        
+
         <section class="sessao-login">
             <div class="area-titulo">
                 <h1>Connect<span>Book</span></h1>
                 <h2>Troque livros, multiplique histórias</h2>
             </div>
-
             <form action="#" id="form-login">
 
-                <label for="email"> Usuário ou Email</label>
+                <label for="email-login"> Usuário ou Email</label>
                 <input type="text" id="email" placeholder="Informe seu email">
                 
-                <label for="senha"> Senha </label>
-                <input type="password" id="senha" placeholder="Informe sua senha">
+                <label for="senha-login"> Senha </label>
+                <div class="senha-container">
+                    <input type="password" id="senha" placeholder="Informe sua senha">
+                    <button type="button" id="btn-olhinho" aria-label="Mostrar senha"> 🙈 </button>
+                </div>
+            
 
                 <div class="links-senha"> 
                     <input type="checkbox" id="lembrar-senha">
@@ -33,11 +37,13 @@
                     
                     <a href="index.html" id="link-esqueceu-senha"> Esqueceu a senha? </a>
                 </div>
-                <label id="msg-login"> </label>
-                <button type="button" id="btn-acessar"> Acessar </button>
-                <a href="cadastro.html" id="link-nao-conta"> Ainda não possuo uma conta </a>
+
+                <button id="btn-acessar"> Acessar </button>
+                <p id="msg-login" class="msg"></p>
+                <a  href=""  id="link-nao-conta" class="link"> Ainda não possuo uma conta </a>
 
             </form>
+
         </section>
     </main>
 </body>

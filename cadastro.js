@@ -1,48 +1,51 @@
-const BANCO_USUARIO = "usuariosCadastrados";
+const BANCO_USUARIOS = 'usuariosCadastrados';
 
-document.getElementById("btn-cadastrar").addEventListener( 'click', () => {
+const formCadastro =  document.getElementById('form-cadastro');
+
+formCadastro.addEventListener('submit', function(event) {
+    event.preventDefault();
 
     const novoUsuario = {
-        nome: document.getElementById("nome").value,
-        email: document.getElementById("email").value,
-        usuario: document.getElementById("usuario").value,
-        senha: document.getElementById("senha").value,
-        confirmaSenha: document.getElementById("confirma-senha").value
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        usuario: document.getElementById('usuario').value,
+        senha: document.getElementById('senha').value,
+        confirmaSenha: document.getElementById('confirma-senha').value
     };
+    
+    
+    const msgErro = document.getElementById('msg-erro');
 
-   const usuariosCadastrados = JSON.parse(localStorage.getItem(BANCO_USUARIO)) || [];
-
-    if( novoUsuario.senha != novoUsuario.confirmaSenha){   
-        const msgErro = document.getElementById("msg-erro");
-        msgErro.textContent = "As senhas não coincidem. Tente novamente.";
-        msgErro.style.color = "red"; 
-
+    if( novoUsuario.senha !== novoUsuario.confirmaSenha) {
+        msgErro.textContent = 'As senhas não coincidem. Por favor, tente novamente.';
+        msgErro.style.color = 'red';
         return;
     }
 
-    if( novoUsuario.nome === "" || novoUsuario.email === "" || novoUsuario.usuario === "" || novoUsuario.senha === "" ){
-        const msgErro = document.getElementById("msg-erro");
-        msgErro.textContent = "Preencha todos os campos...";
-        msgErro.style.color = "red"; 
+    //validacao se usuario ja existe
 
-      return;
-   }  
+    const usuariosCadastrados = JSON.parse(localStorage.getItem(BANCO_USUARIOS)) || [];
+    const emailExistente = usuariosCadastrados.find(e => e.email === novoUsuario.email);
+    const usuarioExistente = usuariosCadastrados.find( u => u.usuario === novoUsuario.usuario);
 
-    if(usuariosCadastrados != null){
-        const usuarioExiste = usuariosCadastrados.some(element =>  element.email === novoUsuario.email || element.usuario === novoUsuario.usuario);
-        
-        if(usuarioExiste){
-        msgErro.textContent = "Email ou Usuário já utilizados";
-        msgErro.style.color = "red"; 
-            return;
-      }
-   }
+       
+    if(emailExistente) {
+        msgErro.textContent = 'Email já cadastrado. Por favor, use outro email.';
+        msgErro.style.color = 'red';
+        return;
+    }
+
+    if(usuarioExistente) {
+        msgErro.textContent = 'Usuário já existe. Por favor, escolha outro nome de usuário.';
+        msgErro.style.color = 'red';
+        return;
+    }
+ 
 
     usuariosCadastrados.push(novoUsuario);
 
-    localStorage.setItem(BANCO_USUARIO, JSON.stringify(usuariosCadastrados));
-    
-    location.href = "login.html";
+    localStorage.setItem(BANCO_USUARIOS, JSON.stringify(usuariosCadastrados));
+    alert('Cadastro realizado com sucesso!');
+    location.href = 'login.html';
 
 });
-

@@ -1,27 +1,26 @@
-const emailSalvo = "jociel@gmail.com";
-const senhaSalva = "010203";
+const BANCO_USUARIOS = 'usuariosCadastrados';
 
-const emailDigitado = document.getElementById("email");
-const senhaDigitada = document.getElementById("senha");
+const formLogin = document.getElementById('form-login');
 
-const msgLogin = document.getElementById("msg-login");
-
-document.getElementById("btn-acessar").addEventListener('click', ()=>{
+formLogin.addEventListener('submit', function(event) {
+    event.preventDefault();
     
-    if( emailDigitado.value == emailSalvo && senhaDigitada.value == senhaSalva ){
-        msgLogin.textContent = "Login realizado com sucesso!";
-        msgLogin.style.color = "green";
-        location.href = "index.html";
-        
-    }else{
-        msgLogin.textContent = "Usuario ou senha incorretos!"
-        msgLogin.style.color = "red";
+    const usuario = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+
+    const msgErro = document.getElementById('msg-erro');
+
+    const usuariosCadastrados = JSON.parse(localStorage.getItem(BANCO_USUARIOS)) || [];
+    const usuarioEncontrado = usuariosCadastrados.find(u => u.usuario === usuario && u.senha === senha || u.email === usuario && u.senha === senha);
+
+    if(!usuarioEncontrado) {
+        msgErro.textContent = 'Usuário ou senha incorretos.';
+        msgErro.style.color = 'red';
+        return;
     }
 
-})
+    alert('Login realizado com sucesso!');
+    location.href = 'index.html';
 
-
-
-
-
-
+});
