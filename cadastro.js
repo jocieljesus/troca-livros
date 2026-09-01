@@ -1,6 +1,6 @@
 const BANCO_USUARIO = "usuariosCadastrados";
 
-document.getElementById("form-caastro").addEventListener( 'submit', (event) => {
+document.getElementById("form-cadastro").addEventListener( 'submit', (event) => {
 
     event.preventDefault();
 
@@ -32,13 +32,21 @@ document.getElementById("form-caastro").addEventListener( 'submit', (event) => {
 
    //Validação se o usuário já existe
     if(usuariosCadastrados != null){
-        const usuarioExiste = usuariosCadastrados.some(element =>  element.email === novoUsuario.email || element.usuario === novoUsuario.usuario);
+        const emailExiste = usuariosCadastrados.some(element =>  element.email === novoUsuario.email);
+
+        const usuarioExiste = usuariosCadastrados.some(element =>  element.usuario === novoUsuario.usuario);
+
+         if(emailExiste){
+            msgErro.textContent = "Email já utilizados";
+            msgErro.style.color = "red"; 
+            return;
+        }
         
         if(usuarioExiste){
-        msgErro.textContent = "Email ou Usuário já utilizados";
-        msgErro.style.color = "red"; 
+            msgErro.textContent = "Usuário já utilizados";
+            msgErro.style.color = "red"; 
             return;
-      }
+        }
    }
 
     usuariosCadastrados.push(novoUsuario);
