@@ -314,3 +314,77 @@ footer{
     box-sizing: border-box;
   
 }
+
+
+i{
+    -webkit-text-stroke: 0.5px white;
+}
+
+
+@media (max-width: 767px) {
+
+    #nome-logo{
+        display: none;
+    }
+
+    ul{
+        gap: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .menu{
+        font-size: 18px;
+    }
+
+    header{
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    nav{
+        width: 100%;
+    }
+
+
+    .banner-principal{
+        padding: 50px;
+        margin: 0;
+        height: 380px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+
+
+  .foto-livro{
+    width: 100%;
+    }
+
+    .card-livro{
+        width: 100%;
+    }
+    
+    .footer-container{
+        flex-wrap: wrap;
+    }
+
+    .footer-coluna:nth-child(4){
+        margin-top: 20px;
+
+    }
+
+    .todos-passos{
+        flex-direction: column;
+    }
+
+    .passo{
+        width: 100%;
+    }
+    .passo p{ margin-bottom: 0;}
+
+
+
+}
